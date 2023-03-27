@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int t,i;
+    scanf("%d",&t);
+    int testcase[t];
+    for(i=0;i<t;i++)
+    {
+        scanf("%d",&testcase[i]);
+        int temp=(testcase[i]/9);
+        if(testcase[i]%9==0)
+        {
+            temp-=1;
+        }
+        printf("%d\n",testcase[i]+temp);
+    }
+    return 0;
+}
