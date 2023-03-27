@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int t,j,z,i;
+    scanf("%d",&t);
+  int  testcase[t];
+    for(j=0;j<t;j++)
+    {
+        char string[100];
+        int count=0;
+        scanf("%s",string);
+        z=strlen(string);
+        if(z>10)
+        {
+            for(i=1;i<z-1;i++)
+            {
+                count++;
+            }
+            printf("%c%d%c\n",string[0],count,string[z-1]);
+        }else
+        {
+            printf("%s\n",string);
+        }
+ 
+ 
+        }
+    return 0;
+}
