@@ -1,0 +1,9 @@
+#include<stdio.h>
+int main()
+{
+    long long int m,n,a,answer;
+    scanf("%lld %lld %lld",&m,&n,&a);
+    answer=((m+a-1)/a)*((n+a-1)/a);
+    printf("%lld",answer);
+    return 0;
+}
