@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+    int t,j;
+    scanf("%d",&t);
+  int  testcase[t];
+    for(j=0;j<t;j++)
+    {
+        int hh,mm;
+        scanf("%d %d",&hh,&mm);
+        hh=hh*60;
+        mm=mm+hh;
+        printf("%d\n",1440-mm);
+ 
+ 
+    }
+    return 0;
+}
