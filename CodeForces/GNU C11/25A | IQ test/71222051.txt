@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main()
+{
+    int n,b,counte=0,counto=0,h,k,i;
+    scanf("%d",&n);
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+        if(a[i]%2==0)
+        {
+            k=0;
+            counte++;
+            k=i;
+        }else
+        {
+            b=1;
+            counto++;
+            h=i;
+        }
+    }
+ 
+    if(counte>counto)
+    {
+        printf("%d\n",h+1);
+    }
+    else
+    {
+        printf("%d\n",k+1);
+    }
+ 
+    return 0;
+ 
+ 
+}
