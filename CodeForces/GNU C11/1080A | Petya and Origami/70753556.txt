@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+    long long int n,k,r,g,b;
+    scanf("%lld %lld",&n,&k);
+    r=n*2;
+    g=n*5;
+    b=n*8;
+    if(r%k!=0)
+    {
+        r=r/k;
+        r++;
+    }else {
+             r=r/k;
+          }
+    if(g%k!=0)
+    {
+        g=g/k;
+        g++;
+    }else {
+             g=g/k;
+          }
+ 
+    if(b%k!=0)
+    {
+        b=b/k;
+        b++;
+    }else {
+             b=b/k;
+          }
+          printf("%lld",r+g+b);
+ 
+    return 0;
+}
