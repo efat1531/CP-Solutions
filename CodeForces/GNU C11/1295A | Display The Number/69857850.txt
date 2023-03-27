@@ -1,0 +1,83 @@
+#include<stdio.h>
+int main()
+{
+    long long int n,i,t;
+    scanf("%lld",&n);
+    long long int testcase[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%lld",&testcase[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+         t=testcase[i]%2;
+         switch (t)
+         {
+         case 0:
+       efat1:
+           if(testcase[i]!=0){
+           printf("1");
+           testcase[i]-=2;}
+ 
+           if(testcase[i]==2)
+           {
+               printf("1");
+               testcase[i]-=2;
+               goto efat1;
+           }
+           if(testcase[i]>3)
+           {
+               testcase[i]-=2;
+               printf("1");
+               goto efat1;
+           }
+           efat2:
+               if(testcase[i]==3)
+           {
+                printf("7");
+               testcase[i]-=3;
+               goto efat2;
+           }
+               if(testcase[i]>4)
+           {
+               testcase[i]-=3;
+              printf("7");
+               goto efat2;
+           }
+           case 1:
+               if(testcase[i]!=0){
+               printf("7");
+               testcase[i]-=3;}
+            efatc2:
+           if(testcase[i]==2)
+           {
+               printf("1");
+               testcase[i]-=2;
+               goto efatc2;
+           }
+           if(testcase[i]>3)
+           {
+               testcase[i]-=2;
+               printf("1");
+               goto efatc2;
+           }
+           efatc1:
+               if(testcase[i]==3)
+           {
+                printf("7");
+               testcase[i]-=3;
+               goto efatc1;
+           }
+               if(testcase[i]>4)
+           {
+               testcase[i]-=3;
+              printf("7");
+               goto efatc1;
+           }
+         }
+ 
+    printf("\n");
+    }
+ 
+    return 0;
+}
