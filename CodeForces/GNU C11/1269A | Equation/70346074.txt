@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    long long int n,a=0,b=0;
+    scanf("%lld",&n);
+    b=n*8;
+    a=n*9;
+    printf("%lld %lld",a,b);
+    return 0;
+}
