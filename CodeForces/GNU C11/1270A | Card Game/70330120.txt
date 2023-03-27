@@ -1,0 +1,45 @@
+#include<stdio.h>
+int main()
+{
+   int t,i,j;
+   scanf("%d",&t);
+   int testcase[t];
+   for(j=0;j<t;j++)
+   {
+       int n,k1,k2;
+       scanf("%d %d %d",&n,&k1,&k2);
+       int pc1[k1],pc2[k2];
+       for(i=0;i<k1;i++)
+       {
+           scanf("%d", &pc1[i]);
+       }
+        for(i=0;i<k2;i++)
+       {
+           scanf("%d", &pc2[i]);
+       }
+     int   maxvalue1,maxvalue2;
+       maxvalue1=pc1[0];
+       maxvalue2=pc2[0];
+       for(i=1;i<k1;i++)
+       {
+           if(maxvalue1<pc1[i])
+           {
+               maxvalue1=pc1[i];
+           }
+       }
+       for(i=1;i<k2;i++)
+       {
+           if(maxvalue2<pc2[i])
+           {
+               maxvalue2=pc2[i];
+           }
+       }
+       //printf("%d    %d\n",maxvalue1,maxvalue2);
+       if(maxvalue1>maxvalue2)
+       {
+           printf("YES\n");
+       }else
+             {printf("NO\n");}
+   }
+   return 0;
+}
