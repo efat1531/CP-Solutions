@@ -1,0 +1,44 @@
+#include<stdio.h>
+int main()
+{
+    int t,i;
+    scanf("%d",&t);
+    int testcase[t];
+    for(i=0;i<t;i++)
+    {
+        int count=0;
+        scanf("%d",&testcase[i]);
+        if(testcase[i]%2==0)
+        {
+            if(testcase[i]/2>1)
+            {
+               // print("%d\n",testcase[i]/2);
+               printf("0\n");
+            }else
+            {
+                while(testcase[i]/2<=1)
+                {
+                    testcase[i]+=2;
+                    count+=2;
+                }
+                printf("%d\n",count);
+            }
+        }else
+        {
+            testcase[i]+=1;
+            count++;
+             if(testcase[i]/2>1)
+            {
+                printf("%d\n",count);
+            }else
+            {
+                while(testcase[i]/2<=1)
+                {
+                    testcase[i]+=2;
+                }
+                 printf("%d\n",count);
+ 
+            }
+        }
+    }
+}
