@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int t,j;
+    scanf("%d",&t);
+    int testcase[t];
+    for(j=0;j<t;j++)
+    {
+        int a,b,c,d,k,tpen,tcil;
+        scanf("%d %d %d %d %d",&a,&b,&c,&d,&k);
+        if(a%c==0)
+        {
+            tpen=a/c;
+        }else
+        {
+            tpen=(a/c)+1;
+        }
+        if(b%d==0)
+        {
+            tcil=b/d;
+        }else
+        {
+            tcil=(b/d)+1;
+        }
+        if((tpen+tcil)>k)
+           {
+               printf("-1\n");
+           }else
+            {
+                printf("%d %d\n",(k-tcil),tcil);
+            }
+    }
+    return 0;
+ 
+ 
+}
