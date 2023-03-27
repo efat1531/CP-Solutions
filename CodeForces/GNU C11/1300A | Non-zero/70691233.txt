@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int j,t;
+    scanf("%d",&t);
+    int testcase[t];
+    for(j=0;j<t;j++)
+    {
+        int n,i,sum=0,count=0;
+        scanf("%d",&n);
+        int a[n];
+        for(i=0;i<n;i++)
+        {
+            scanf("%d",&a[i]);
+            if(a[i]==0)
+            {
+                a[i]+=1;
+                count++;
+            }
+            sum+=a[i];
+        }
+        if(sum!=0&&count==0)
+        {
+            printf("0\n");
+        }else if(sum==0){
+ 
+        sum=sum+1;
+        count++;
+ 
+         printf("%d\n",count);
+ 
+        }else if(sum!=0&&count>0)
+        {
+            printf("%d\n",count);
+        }
+ 
+ 
+    }
+    return 0;
+}
