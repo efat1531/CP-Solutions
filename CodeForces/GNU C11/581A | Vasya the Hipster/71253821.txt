@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+  int a,b,countd=0,counts=0;
+  scanf("%d %d",&a,&b);
+  while(a>0&&b>0)
+  {
+      a-=1;
+      b-=1;
+      countd++;
+  }
+  if(a>0)
+  {
+      counts+=a/2;
+  }
+  if(b>0)
+  {
+      counts+=b/2;
+  }
+  printf("%d %d",countd,counts);
+ 
+}
