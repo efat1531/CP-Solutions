@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int t,j;
+    scanf("%d",&t);
+    for(j=0;j<t;j++)
+    {
+        char name[1000];
+        int l;
+        scanf("%s",name);
+        l=strlen(name);
+        if(name[l-2]=='p')
+        {
+            printf("FILIPINO\n");
+        }else if(name[l-4]=='d'||name[l-4]=='m')
+        {
+            if(name[l-3]=='a'||name[l-3]=='e')
+            {
+                printf("JAPANESE\n");
+            }else{
+                  printf("KOREAN\n");
+                  }
+        }else{
+                  printf("KOREAN\n");
+                  }
+    }
+ 
+    return 0;
+}
