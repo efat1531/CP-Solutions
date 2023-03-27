@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+    int n,m,a,b,tk;
+    scanf("%d %d %d %d",&n,&m,&a,&b);
+    if(m*a>b){
+ 
+  int temp=n/m;
+  tk=temp*b ;
+     temp=n%m;
+     if(temp*a<b&&temp!=0)
+     {
+         tk+=temp*a;
+     }else if(temp!=0)
+     {
+         tk+=b;
+     }
+    }else
+    {
+        tk=n*a;
+    }
+     printf("%d\n",tk);
+ 
+ 
+     return 0;
+}
